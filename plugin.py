@@ -1,12 +1,13 @@
 # KaRadio
 #
-# v0.1.1
+# v0.1.3
 #
-# Description
+# KaRadio plugin for Domoticz Home Automation System
+# https://github.com/e2002/KaRadioDomoticzPlugin
 #
 #
 """
-<plugin key="KaRadio" name="KaRadio" author="easy [support@k210.org]" version="0.1.1">
+<plugin key="KaRadio" name="KaRadio" author="easy [support@k210.org]" version="0.1.3">
     <params>
         <param field="Mode1" label="KaRadio IP Address" width="200px" required="true" default=""/>
         <param field="Mode2" label="Interval (sec)" width="30px" required="true" default="2"/>
