@@ -26,7 +26,6 @@ import json
 import socket
 import re
 import threading
-import queue
 import time
 
 class BasePlugin:
@@ -48,7 +47,7 @@ class BasePlugin:
         self.Online = True
         self.hb = 0
 
-        self.messageThread = threading.Thread(name="QueueThread", target=BasePlugin.handleMessage, args=(self,))
+        self.messageThread = threading.Thread(name="KaStatusThread", target=BasePlugin.handleMessage, args=(self,))
         
         return
         
