@@ -1,6 +1,6 @@
 # KaRadio
 #
-# v0.1.3
+# v0.1.4
 #
 # KaRadio plugin for Domoticz Home Automation System
 # https://github.com/e2002/KaRadioDomoticzPlugin
@@ -44,6 +44,9 @@ class BasePlugin:
         self.lastTitle           = None
         self.lastVolume          = None
         
+        #self.startupScenes       = "Stop|Refresh"
+        self.startupScenes       = "Стоп|Обновить"
+        
         self.Online = True
         self.hb = 0
 
@@ -55,7 +58,7 @@ class BasePlugin:
         try:
             self.kaIP                = Parameters["Mode1"]
             self.delay               = int(Parameters["Mode2"])
-            self.debugging = Parameters["Mode6"]
+            self.debugging           = Parameters["Mode6"]
             
             if self.debugging == "Verbose":
                 Domoticz.Debugging(-1)
@@ -65,7 +68,7 @@ class BasePlugin:
                 DumpConfigToLog()
             
             if not self.UNIT_PLAYLIST in Devices:
-                Options = {"Scenes": "Стоп|Обновить", "LevelNames": "|", "LevelOffHidden": "false", "SelectorStyle": "0"}
+                Options = {"Scenes": self.startupScenes, "LevelNames": "|", "LevelOffHidden": "false", "SelectorStyle": "0"}
                 Domoticz.Device(Name="Playlist", Unit=self.UNIT_PLAYLIST, Type=244, Subtype=62 , Switchtype=18, Used=0, Options = Options, Image=12).Create()
             if not self.UNIT_PLAYPAYSE in Devices:
                 Domoticz.Device(Name="Play/Pause", Unit=self.UNIT_PLAYPAYSE, Type=244, Subtype=73 , Switchtype=0, Used=0, Image=9).Create()
@@ -121,7 +124,7 @@ class BasePlugin:
             self.kaopen('volume='+str(vol))
 
     def UpdatePlaylist(self):
-        levelnames = "Стоп|Обновить"
+        levelnames = self.startupScenes
         item = 0
         while item < 254:
             html = self.kaopen('list='+str(item))
