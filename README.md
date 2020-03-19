@@ -5,9 +5,9 @@ KaRadio plugin for Domoticz Home Automation System
 
 #### Installation
 ~~~
-cd <domoticz>/plugins/
+cd <path_to_domoticz>/plugins/
 git clone https://github.com/e2002/KaRadioDomoticzPlugin KaRadio
-restart domoticz
+../domoticz.sh restart
 ~~~
 #### Add hardware
 
