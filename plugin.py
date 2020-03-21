@@ -5,6 +5,7 @@
 # KaRadio plugin for Domoticz Home Automation System
 # https://github.com/e2002/KaRadioDomoticzPlugin
 #
+# pss, bro, want some online right now?
 #
 """
 <plugin key="KaRadio" name="KaRadio" author="easy [support@k210.org]" version="0.1.3">
@@ -68,7 +69,7 @@ class BasePlugin:
                 DumpConfigToLog()
             
             if not self.UNIT_PLAYLIST in Devices:
-                Options = {"Scenes": self.startupScenes, "LevelNames": "|", "LevelOffHidden": "false", "SelectorStyle": "0"}
+                Options = {"Scenes": self.startupScenes, "LevelNames": "|", "LevelOffHidden": "false", "SelectorStyle": "1"}
                 Domoticz.Device(Name="Playlist", Unit=self.UNIT_PLAYLIST, Type=244, Subtype=62 , Switchtype=18, Used=0, Options = Options, Image=12).Create()
             if not self.UNIT_PLAYPAYSE in Devices:
                 Domoticz.Device(Name="Play/Pause", Unit=self.UNIT_PLAYPAYSE, Type=244, Subtype=73 , Switchtype=0, Used=0, Image=9).Create()
