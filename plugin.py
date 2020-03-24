@@ -10,7 +10,7 @@
 """
 <plugin key="KaRadio" name="KaRadio" author="easy [support@k210.org]" version="0.1.3">
     <params>
-        <param field="Mode1" label="KaRadio IP Address" width="200px" required="true" default=""/>
+        <param field="Address" label="KaRadio IP Address" width="200px" required="true" default=""/>
         <param field="Mode2" label="Interval (sec)" width="30px" required="true" default="2"/>
         <param field="Mode6" label="Debug" width="150px">
             <options>
@@ -57,7 +57,7 @@ class BasePlugin:
         
     def onStart(self):
         try:
-            self.kaIP                = Parameters["Mode1"]
+            self.kaIP                = Parameters["Address"]
             self.delay               = int(Parameters["Mode2"])
             self.debugging           = Parameters["Mode6"]
             
