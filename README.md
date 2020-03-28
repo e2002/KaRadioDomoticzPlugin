@@ -1,6 +1,5 @@
 # KaRadioDomoticzPlugin
-[KaRadio](https://hackaday.io/project/11570-wifi-webradio-on-esp8266-or-esp32) plugin for Domoticz Home Automation System
-
+Plugin for control [KaRadio](https://hackaday.io/project/11570-wifi-webradio-on-esp8266-or-esp32) devices using [Domotics](https://www.domoticz.com/).
 ![](https://github.com/e2002/KaRadioDomoticzPlugin/raw/master/domoticz-karadio-plugin-800.jpg)
 
 #### Installation
