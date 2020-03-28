@@ -1,5 +1,5 @@
 # KaRadioDomoticzPlugin
-KaRadio plugin for Domoticz Home Automation System
+[KaRadio](https://hackaday.io/project/11570-wifi-webradio-on-esp8266-or-esp32) plugin for Domoticz Home Automation System
 
 ![](https://github.com/e2002/KaRadioDomoticzPlugin/raw/master/domoticz-karadio-plugin-800.jpg)
 
@@ -7,7 +7,7 @@ KaRadio plugin for Domoticz Home Automation System
 ~~~
 cd <path_to_domoticz>/plugins/
 git clone https://github.com/e2002/KaRadioDomoticzPlugin KaRadio
-../domoticz.sh restart
+sudo service domoticz.sh restart
 ~~~
 #### Add hardware
 
